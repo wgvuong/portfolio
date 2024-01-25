@@ -1,0 +1,124 @@
+#skills {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.skillTitle {
+    font-size: 3rem;
+    font-weight: 300;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    margin-left: 8rem;
+    margin-right: auto;
+}
+
+.skillTitle::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    margin-left: 1rem;
+    margin-top: 1.8rem;
+    width: 38rem;
+    background: rgb(60, 60, 60);
+}
+
+.skillDesc {
+    font-weight: 300;
+    font-size: 1rem;
+    max-width: 51rem;
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* wraps content if it exceeds the width */
+    width: 70vw;
+    max-width: 65rem;
+}
+
+.about-sec {
+    position: relative;
+    overflow: hidden;
+    height: 15rem;
+    width: 15vw;
+    background: linear-gradient(to left, rgb(20,20,20), transparent 90%);
+    margin: 0.5rem;
+}
+
+.about-sec:hover {
+    background: rgb(20,20,20);
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.about-sec:hover .about-title:after {
+    width: 92%;
+}
+
+.about-title {
+    font-weight: 400;
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    text-align: left;
+    padding: 0 1.5rem;
+}
+
+.about-title::after {
+    content: '';
+    position: absolute;
+    height: 0.1rem;
+    right: 0;
+    bottom: 12.2rem;
+    width: 0%;
+    background: white;
+    transition: width .2s;
+}
+
+.about-img {
+    object-fit: cover;
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-right: 0.5rem;
+}
+
+.about-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.about-item {
+    background: rgb(35, 35, 35);
+    border-radius: 15px;
+    margin: 0.25rem 0.4rem;
+    padding: 0.25rem 0.6rem;
+}
+
+@media screen and (max-width:720px) {
+    .skillBarText>p {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .skillBarText>p {
+        font-size: 3vw;
+    }
+    .skillBarImg {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+    .skillBarText>h2 {
+        font-size: 5vw;
+    }
+}
